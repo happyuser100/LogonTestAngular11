@@ -1,0 +1,13 @@
+<h1>Search Product
+  <span *ngIf="selectedProduct">({{selectedProduct?.name}})</span>
+  :
+</h1>
+<div>
+  <input type="search" #txtSearch (input)="keyWord = txtSearch.value" (blur)="search()">
+  <!-- <button (click)="search()" [disabled]="isBusy">OK</button> -->
+  <span [hidden]="!isBusy">Loading...</span>
+</div>
+
+<app-products-list [selectedItem]="selectedProduct" (selectItemRequested)="onSelectItemRequested($event)"
+  [list]="searchResult">
+</app-products-list>

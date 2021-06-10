@@ -1,0 +1,40 @@
+<h1>Search person
+    <span *ngIf="selectedItemInPage">({{selectedItemInPage}})</span>
+  :</h1>
+<div>
+  <input type="search" #txtSearch (input)="keyWord = txtSearch.value" (blur)="search()">
+  <!-- <button (click)="search()" [disabled]="isBusy">OK</button> -->
+  <span [hidden]="!isBusy">Loading...</span>
+</div>
+
+<app-string-list
+[list]="searchResult" (selectItemRequested)="onSelectItemRequested($event)"
+  [selectedItem]="selectedItemInPage"
+></app-string-list>
+
+
+<!--
+
+  {{}} - inner html
+  () - events
+  [] - properties / attributes
+
+ -->
+
+
+
+<!-- {
+   firstName:'David', -- > string
+   lastName:'Cohen'
+ } -->
+
+<!--
+   1. disable
+   2. default value
+   3. tuched
+   4. dirty
+   5. notifyOnChanged
+   6. value
+   7. pristine
+   8. validations
+  -->

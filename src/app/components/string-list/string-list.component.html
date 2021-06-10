@@ -1,0 +1,9 @@
+
+<div class="flexit">
+  <div *ngFor="let item of list" class="result-item"
+  [class.selected]="item === selectedItem"
+  (click)="onItemClicked(item)">
+    {{item}}
+  </div>
+</div>
+

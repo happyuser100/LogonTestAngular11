@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'search-app';
+
+    birthdate = new Date();
+    grade = 0.76;
+
 }

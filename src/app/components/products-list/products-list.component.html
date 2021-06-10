@@ -1,0 +1,11 @@
+<div class="flexit">
+  <div *ngFor="let item of list" class="result-item" [class.selected]="item === selectedItem"
+    (click)="onItemClicked(item)">
+    <div>
+      {{item.name}}
+    </div>
+    <div>
+      {{item.price | currency}}
+    </div>
+  </div>
+</div>

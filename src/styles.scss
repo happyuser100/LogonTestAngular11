@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+.flexit {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .result-item {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 9px;
+    padding: 10px;
+    width: 120px;
+    border: 1px solid black;
+    &:hover {
+      background-color: cadetblue;
+    }
+    &.selected {
+      background-color: chocolate;
+    }
+  }
+}
